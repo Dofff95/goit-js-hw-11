@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 const apiKey = '40046214-79f7646e04c4ec5b23e077d8e';
 const searchForm = document.getElementById('search-form');
 const gallery = document.querySelector('.gallery');
