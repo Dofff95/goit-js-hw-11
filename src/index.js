@@ -56,8 +56,8 @@ async function searchImagesAndDisplay(query, page = 1) {
       // } else {
       //   loadMoreButton.style.display = 'none';
       // }
-      totalHits = data.totalHits;
-      totalPage = Math.ceil(totalHits / 40); // 20 images per page
+      const totalHits = data.totalHits;
+      const totalPage = Math.ceil(totalHits / 40); // 20 images per page
       
       if (page < totalPage) {
         loadMoreButton.style.display = 'block';
