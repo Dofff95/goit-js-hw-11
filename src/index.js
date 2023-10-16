@@ -49,9 +49,17 @@ async function searchImagesAndDisplay(query, page = 1) {
         gallery.appendChild(photoCard);
       });
       
-      totalHits = data.totalHits;
+      // totalHits = data.totalHits;
       
-      if (totalHits > page * 20) {
+      // if (totalHits > page * 20) {
+      //   loadMoreButton.style.display = 'block';
+      // } else {
+      //   loadMoreButton.style.display = 'none';
+      // }
+      totalHits = data.totalHits;
+      totalPage = Math.ceil(totalHits / 40); // 20 images per page
+      
+      if (page < totalPage) {
         loadMoreButton.style.display = 'block';
       } else {
         loadMoreButton.style.display = 'none';
